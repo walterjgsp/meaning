@@ -1,3 +1,5 @@
+import Logging
+
 let configuration = Configuration()
 
-// print(ConfigurationRepository.shared.requestForLocation())
+ConfigurationRepository.shared.openConfigurationFile()
