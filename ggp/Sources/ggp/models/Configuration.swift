@@ -1,30 +1,30 @@
 import Foundation
 
 class Configuration : Decodable {
-    var crossover_rate: Double = 0.0
-    var mutation_rate: Double = 0.0
+    var crossoverRate: Double = 0.0
+    var mutationRate: Double = 0.0
     var population: Int = 0
     var generations: Int = 0
-    var selection_size: Int = 0
+    var selectionSize: Int = 0
 
     static let shared = Configuration()
 
     init(){}
 
     private enum CodingKeys: String, CodingKey {
-        case crossover_rate
-        case mutation_rate
+        case crossoverRate
+        case mutationRate
         case population
         case generations
-        case selection_size
+        case selectionSize
     }
 
     public var description: String { 
-        return "* Crossover Rate: \(crossover_rate)\n"
-            + "* Mutation Rate: \(mutation_rate)\n"
+        return "* Crossover Rate: \(crossoverRate)\n"
+            + "* Mutation Rate: \(mutationRate)\n"
             + "* Population: \(population)\n"
             + "* Generations: \(generations)\n"
-            + "* Selection Size: \(selection_size)\n" 
+            + "* Selection Size: \(selectionSize)\n" 
     }
 
     func decode(data: Data) throws -> Configuration? {

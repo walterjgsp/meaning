@@ -1,7 +1,7 @@
 {
-    "crossover_rate": 50.0,
-    "mutation_rate": 25.0,
+    "crossoverRate": 50.0,
+    "mutationRate": 25.0,
     "population": 300,
     "generations": 100,
-    "selection_size": 5
+    "selectionSize": 5
 }
