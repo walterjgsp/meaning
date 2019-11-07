@@ -26,7 +26,7 @@ final class ggpTests: XCTestCase {
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let output = String(data: data, encoding: .utf8)
 
-        XCTAssertEqual(output, "Hello, world!\n")
+        XCTAssertEqual(output, "Load configuration file\nConfigurations loaded:\n* Crossover Rate: 50.0\n* Mutation Rate: 25.0\n* Population: 300\n* Generations: 100\n* Selection Size: 5\n\n")
     }
 
     /// Returns path to the built products directory.
