@@ -12,7 +12,6 @@ The architecture followed by this project is presented in the next image:
     <img  src="./images/architecture.png">
 </div>
 
-
 ## GGP
 
 The Grammar Genetic Programming module was made using Swift as base language
