@@ -15,3 +15,8 @@ The architecture followed by this project is presented in the next image:
 ## GGP
 
 The Grammar Genetic Programming module was made using Swift as base language
+
+## SK Processor
+
+This is the module to process each individual genrate by the GGP using the framework SKLearn. The module is made using Python
+and [Faust](https://faust.readthedocs.io/en/latest/index.html) 

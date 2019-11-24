@@ -1,0 +1,7 @@
+[
+    {
+        "name":"DecisionTreeClassifier",
+        "import":"from sklearn.tree import DecisionTreeClassifier",
+        "parameters":[]
+    }
+]
