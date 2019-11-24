@@ -5,5 +5,5 @@ class Algorithm:
         self.alg_str = alg_str
         self.parameters_str = parameters_str
 
-    def getModelStr(self):
+    def get_model_str(self):
         return "{0}()".format(self.alg_str)

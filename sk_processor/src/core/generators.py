@@ -3,7 +3,7 @@
 
 from models.algorithm import Algorithm
 
-def generateModel(algorithm : Algorithm):
+def generate_model(algorithm : Algorithm):
     exec(algorithm.import_str)
-    generated_model = eval(algorithm.getModelStr())
+    generated_model = eval(algorithm.get_model_str())
     return generated_model
