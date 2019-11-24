@@ -4,6 +4,7 @@ python:
 before_install: cd sk_processor
 install:
   - pip install -r requirements.txt
-  - pip install -e .
+before_script: cd src
 script:
+  - pip install -e .
   - py.test -v
