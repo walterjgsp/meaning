@@ -1,5 +1,5 @@
 language: python
-before_script: cd sk_processor
+before_install: cd sk_processor
 install:
   - pip install -r requirements.txt
 script:
