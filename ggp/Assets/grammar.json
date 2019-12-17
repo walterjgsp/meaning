@@ -1,0 +1,15 @@
+{
+    "name":"start",
+    "key":"start",
+    "terminal":false,
+    "optional":false,
+    "children":[
+        {
+            "name":"algorithm",
+            "key":"classifier",
+            "terminal":true,
+            "optional":false,
+            "children":[]
+        }
+    ]
+}

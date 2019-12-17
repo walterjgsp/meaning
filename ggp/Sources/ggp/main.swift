@@ -9,3 +9,13 @@ if configuration?.description != nil {
 } else {
     LoggerHelper.shared.logError(message:"Unable to load configurations from file")
 }
+
+let grammarTree = GrammarRepository.shared.getFullGrammarTree()
+
+print("Load Full Grammar Tree")
+print(grammarTree ?? "")
+
+let classifiers = GrammarRepository.shared.getClassifiers()
+
+print("\nClassifiers List")
+print(classifiers)

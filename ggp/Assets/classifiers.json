@@ -1,11 +1,14 @@
-[
-    {
-        "name":"DecisionTreeClassifier",
-        "import":"from sklearn.tree import DecisionTreeClassifier",
-        "parameters":[]
-    },
-    {
-        "name":"KNeighborsClassifier",
-        "import": "from sklearn.neighbors import KNeighborsClassifier",
-        "parameters":[]
-    }
+{
+    "classifiers":[
+        {
+            "name":"DecisionTreeClassifier",
+            "import_package":"from sklearn.tree import DecisionTreeClassifier",
+            "parameters":[]
+        },
+        {
+            "name":"KNeighborsClassifier",
+            "import_package": "from sklearn.neighbors import KNeighborsClassifier",
+            "parameters":[]
+        }
+    ]
+}
