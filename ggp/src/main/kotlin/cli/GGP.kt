@@ -3,10 +3,14 @@ package cli
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.option
+import core.PopulationFactory
 import repository.ConfigurationRepository
 import repository.GrammarRepository
-import shared.ParamDefault.CONFIG_JSON_PATH
-import shared.ParamDefault.GRAMMAR_JSON_PATH
+import shared.Artifacts
+import shared.Constants.CLASSIFIER_JSON_PATH
+import shared.Constants.COMPONENT_CLASSIFIER_KEY
+import shared.Constants.CONFIG_JSON_PATH
+import shared.Constants.GRAMMAR_JSON_PATH
 
 class GGP : CliktCommand() {
 
@@ -19,10 +23,15 @@ class GGP : CliktCommand() {
 
     override fun run() {
         echo("Loading configuration file")
-        val configuration = ConfigurationRepository.loadConfiguration(configurationFilePath)
+        Artifacts.configuration = ConfigurationRepository.loadConfiguration(configurationFilePath)
 
         echo("Loading grammar tree from file")
-        val grammarTree = GrammarRepository.loadGrammarTree(grammarFilePath)
-        echo(grammarTree)
+        Artifacts.grammarTree = GrammarRepository.loadGrammarTree(grammarFilePath)
+
+        echo("Loading classifiers")
+        Artifacts.components.putIfAbsent(COMPONENT_CLASSIFIER_KEY,GrammarRepository.loadClassifiers(CLASSIFIER_JSON_PATH))
+
+        val population = PopulationFactory.generateInitialPopulation()
+        echo("Initial population generated with ${population.size} individuals")
     }
 }
