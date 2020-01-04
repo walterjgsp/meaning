@@ -14,7 +14,7 @@ The architecture followed by this project is presented in the next image:
 
 ## 1. GGP
 
-The Grammar Genetic Programming module was made using Swift as base language
+The Grammar Genetic Programming module was made using Kotlin as base language
 
 ## 2. SK Processor
 
