@@ -19,3 +19,8 @@ let classifiers = GrammarRepository.shared.getClassifiers()
 
 print("\nClassifiers List")
 print(classifiers)
+
+var pool : [String:[Any]] = [:]
+pool["classifier"] = classifiers
+
+print(pool)

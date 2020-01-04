@@ -2,13 +2,13 @@
     "name":"start",
     "key":"start",
     "terminal":false,
-    "optional":false,
+    "probability":1.0,
     "children":[
         {
             "name":"algorithm",
             "key":"classifier",
             "terminal":true,
-            "optional":false,
+            "probability":1.0,
             "children":[]
         }
     ]

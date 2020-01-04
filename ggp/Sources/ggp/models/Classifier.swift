@@ -11,13 +11,13 @@ struct Classifier: Decodable {
         case parameters
     }
 
-    struct Parameter: Decodable{
+    struct Parameter: Decodable {
         let name: String
         let value: String
     }
 }
 
-struct ClassifierList: Decodable{
+struct ClassifierList: Decodable {
     let classifiers : [Classifier]
 }
 

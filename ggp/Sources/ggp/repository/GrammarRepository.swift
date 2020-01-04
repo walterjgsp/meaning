@@ -7,7 +7,6 @@ class GrammarRepository{
     init(){}
     
     func getFullGrammarTree() -> GrammarNode? {
-        
         if let content = try? FileReader.shared.readAssetFile(fileName:"grammar",fileExtension:"json") {
             do{
                 let decoder = JSONDecoder()
@@ -22,7 +21,6 @@ class GrammarRepository{
     }
 
     func getClassifiers() -> [Classifier] {
-
         if let content = try? FileReader.shared.readAssetFile(fileName:"classifiers",fileExtension:"json"){
             do{
                 let decoder = JSONDecoder()

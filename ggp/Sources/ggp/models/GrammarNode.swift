@@ -3,7 +3,7 @@ import Foundation
 struct GrammarNode : Decodable{
     let name : String
     let key: String
-    let optional: Bool
+    let probability: Float
     let terminal: Bool
     let children: [GrammarNode]
 }

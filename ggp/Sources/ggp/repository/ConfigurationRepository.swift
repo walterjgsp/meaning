@@ -7,7 +7,6 @@ class ConfigurationRepository{
     init(){}
     
     func openConfigurationFile() -> Configuration? {
-
         if let content = try? FileReader.shared.readAssetFile(fileName:"config",fileExtension:"json") {
             do{
                 let configuration = try Configuration.shared.decode(data: content)
