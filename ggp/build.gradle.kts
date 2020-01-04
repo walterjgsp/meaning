@@ -1,3 +1,6 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+import org.gradle.api.tasks.testing.logging.TestLogEvent.*
+
 plugins {
     kotlin("jvm") version "1.3.61"
 }
@@ -29,6 +32,10 @@ tasks {
         kotlinOptions.jvmTarget = "1.8"
     }
     test {
+        testLogging {
+            showStandardStreams = true
+            events = setOf(PASSED, FAILED, SKIPPED)
+        }
         useJUnitPlatform()
     }
 }
