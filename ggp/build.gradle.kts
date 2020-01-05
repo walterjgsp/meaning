@@ -1,4 +1,3 @@
-import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.gradle.api.tasks.testing.logging.TestLogEvent.*
 
 plugins {
@@ -15,8 +14,15 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+
+    // Clikt
     implementation("com.github.ajalt:clikt:2.3.0")
+
+    // Gson
     implementation("com.google.code.gson:gson:2.8.6")
+
+    // Kafka
+    implementation ("org.apache.kafka:kafka-clients:2.4.0")
 
     // Testing dependencies
     testImplementation("org.assertj:assertj-core:3.12.2")
